@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+{{>head title=this.title subpage='Page X' }}
+
+<style>
+.container{
+    margin-top: 50px;
+}
+.btn-primary{
+    margin: 13px 0px;
+}
+</style>
+<body>
+    {{>header  title=this.title}}
+
+    <main>
+        <div class="container">
+            <h1 height="150px">{{title}}</h1>
+            
+            <form action="/product" method="POST" >
+                <BR> ProductName:
+                <input type="text" class="form-control" name="ProductName" id="ProductName"required >
+                <BR> ProductCode :
+                <input type="text" class="form-control" name="ProductCode" id="ProductCode"required >
+                <BR> Price:
+                <input type="number" class="form-control" name="Price" id="Price"required >
+                <BR> Brand:
+                <input type="text" class="form-control" name="Brand" id="Brand"required >
+                <input type="submit"  class="btn btn-primary" value="Update">
+                <a href="/"><button type="button" class="btn btn-primary">Back to Home</button></a>
+            </form>
+        </div>        
+    </main>
+    
+
+    {{>footer}}
+</body>
+
+</html>
